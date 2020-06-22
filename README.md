@@ -44,7 +44,7 @@ You should see this:
 
 You will see the "Client ID" field on the left (it's redacted here). Copy and save your Client ID somewhere - you'll need it later. Click "Show client secret" under Client ID and it should show you another long list of characters. Also copy and save your Client Secret.
 
-Next, we need your playlist URI. To do this, simply open Spotify, right-click on the playlist you want to download, hover over "Share", and click "Copy Spotify URI". It should look something like this: `spotify:playlist:5UXDjra7SVG5XjdNXW3On2`. When inputting this into the script, make sure to *only input the characters after "spotify:playlist:"*. So for this example, input `5UXDjra7SVG5XjdNXW3On2`. Save your URI somewhere handy
+Next, we need your playlist URI. To do this, simply open Spotify, right-click on the playlist you want to download, hover over "Share", and click "Copy Spotify URI". It should look something like this: `spotify:playlist:5UXDjra7SVG5XjdNXW3On2`. When inputting this into the script, make sure to *only input the characters after "spotify:playlist:"*. So for this example, input `5UXDjra7SVG5XjdNXW3On2`. Save your URI somewhere handy.
 
 ### 4. Running
 
