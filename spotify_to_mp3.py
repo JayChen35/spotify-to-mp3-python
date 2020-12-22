@@ -67,7 +67,7 @@ def find_and_download_songs(reference_file: str):
             while attempts_left > 0:
                 try:
                     results_list = YoutubeSearch(text_to_search, max_results=1).to_dict()
-                    best_url = "https://www.youtube.com{}".format(results_list[0]['link'])
+                    best_url = "https://www.youtube.com{}".format(results_list[0]['url_suffix'])
                     break
                 except IndexError:
                     attempts_left -= 1
