@@ -9,12 +9,6 @@ from youtube_search import YoutubeSearch
 
 # **************PLEASE READ THE README.md FOR USE INSTRUCTIONS**************
 
-def generate_token(client_id: str, client_secret: str):
-    credentials = oauth2.SpotifyClientCredentials(client_id=client_id, client_secret=client_secret)
-    token = credentials.get_access_token()
-    return token
-
-
 def write_tracks(text_file: str, tracks: dict):
     # Writes the information of all tracks in the playlist to a text file. 
     # This includins the name, artist, and spotify URL. Each is delimited by a comma.
@@ -92,13 +86,13 @@ def find_and_download_songs(reference_file: str):
 
 if __name__ == "__main__":
     # Parameters
-    print("Please read README.md for use instructions.")
+    print("Please read README.md for use instructions.")    
     client_id = input("Client ID: ")
     client_secret = input("Client secret: ")
     username = input("Spotify username: ")
     playlist_uri = input("Playlist URI (excluding \"spotify:playlist:\"): ")
-    token = generate_token(client_id, client_secret)
-    spotify = spotipy.Spotify(auth=token)
+    auth_manager = oauth2.SpotifyClientCredentials(client_id=client_id, client_secret=client_secret)
+    spotify = spotipy.Spotify(auth_manager=auth_manager)
     playlist_name = write_playlist(username, playlist_uri)
     reference_file = "{}.txt".format(playlist_name)
     # Create the playlist folder
