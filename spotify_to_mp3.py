@@ -4,7 +4,7 @@
 import os
 import spotipy
 import spotipy.oauth2 as oauth2
-import youtube_dl
+import yt_dlp
 from youtube_search import YoutubeSearch
 
 # **************PLEASE READ THE README.md FOR USE INSTRUCTIONS**************
@@ -80,7 +80,7 @@ def find_and_download_songs(reference_file: str):
                     'preferredquality': '192',
                 }],
             }
-            with youtube_dl.YoutubeDL(ydl_opts) as ydl:
+            with yt_dlp.YoutubeDL(ydl_opts) as ydl:
                 ydl.download([best_url])
 
 
