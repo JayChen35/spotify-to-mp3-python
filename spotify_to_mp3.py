@@ -191,7 +191,9 @@ if __name__ == "__main__":
     client_id = input("Client ID: ")
     client_secret = input("Client secret: ")
     username = input("Spotify username: ")
-    playlist_uri = input("Playlist URI (excluding \"spotify:playlist:\"): ")
+    playlist_uri = input("Playlist URI/Link: ")
+    if playlist_uri.find("https://open.spotify.com/playlist/") != -1:
+        playlist_uri = playlist_uri.replace("https://open.spotify.com/playlist/", "")
     multicore_support = enable_multicore(autoenable=False, maxcores=None, buffercores=1)
     auth_manager = oauth2.SpotifyClientCredentials(client_id=client_id, client_secret=client_secret)
     spotify = spotipy.Spotify(auth_manager=auth_manager)
