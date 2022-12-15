@@ -80,6 +80,7 @@ def find_and_download_songs(reference_file: str):
                     'preferredcodec': 'mp3',
                     'preferredquality': '192',
                 }],
+                'outtmpl': os.path.join( "{}".format(os.getcwd()), '%(title)s.%(ext)s'),
             }
             with yt_dlp.YoutubeDL(ydl_opts) as ydl:
                 ydl.download([best_url])
