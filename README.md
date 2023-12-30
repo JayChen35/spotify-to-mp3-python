@@ -46,6 +46,21 @@ You will see the "Client ID" field on the left (it's redacted here). Copy and sa
 
 Next, we need your playlist URI. To do this, simply open Spotify, right-click on the playlist you want to download, hover over "Share", and click "Copy Spotify URI". It should look something like this: `spotify:playlist:37i9dQZEVXbJiZcmkrIHGU`. When inputting this into the script, make sure to *only input the characters after "spotify:playlist:"*. So for this example, input `37i9dQZEVXbJiZcmkrIHGU`. Save your URI somewhere handy.
 
+Alternatively, you can find the URI as follows:
+1. Right-click on the playlist you want to download
+2. Click "Share"
+3. Click "Embed Playlist"
+4. Click "Show Code"
+5. The URI is the code between "https://open.spotify.com/embed/playlist/" and the first "?"
+
+For example in this code snippet:
+
+```html
+<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/11cPCycyvvpL0MDLO648vE?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+```
+
+The code is 11cPCycyvvpL0MDLO648vE
+
 ### 4. Running
 
 Running this script is straightforward. Simply run in your terminal session:
