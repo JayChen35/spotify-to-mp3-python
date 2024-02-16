@@ -228,9 +228,17 @@ def enable_multicore(autoenable=False, maxcores=None, buffercores=1):
 if __name__ == "__main__":
     # Parameters
     print("Please read README.md for use instructions.")
-    client_id = input("Client ID: ")
-    client_secret = input("Client secret: ")
-    username = input("Spotify username: ")
+    if os.path.isfile('config.ini'):
+        import configparser
+        config = configparser.ConfigParser()
+        config.read("config.ini")
+        client_id = config["Settings"]["client_id"]
+        client_secret = config["Settings"]["client_secret"]
+        username = config["Settings"]["username"]
+    else:
+        client_id = input("Client ID: ")
+        client_secret = input("Client secret: ")
+        username = input("Spotify username: ")
     playlist_uri = input("Playlist URI/Link: ")
     if playlist_uri.find("https://open.spotify.com/playlist/") != -1:
         playlist_uri = playlist_uri.replace("https://open.spotify.com/playlist/", "")
