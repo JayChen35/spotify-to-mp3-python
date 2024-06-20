@@ -225,6 +225,11 @@ def enable_multicore(autoenable=False, maxcores=None, buffercores=1):
         print("Too many cores requested, single core operation fallback")
         return 1
 
+def get_config():
+    client_id = input("Client ID: ")
+    client_secret = input("Client secret: ")
+    username = input("Spotify username: ")
+
 if __name__ == "__main__":
     # Parameters
     print("Please read README.md for use instructions.")
@@ -235,10 +240,10 @@ if __name__ == "__main__":
         client_id = config["Settings"]["client_id"]
         client_secret = config["Settings"]["client_secret"]
         username = config["Settings"]["username"]
+        if client_id == "yourclientid":
+            get_config()
     else:
-        client_id = input("Client ID: ")
-        client_secret = input("Client secret: ")
-        username = input("Spotify username: ")
+        get_config()
     playlist_uri = input("Playlist URI/Link: ")
     if playlist_uri.find("https://open.spotify.com/playlist/") != -1:
         playlist_uri = playlist_uri.replace("https://open.spotify.com/playlist/", "")
