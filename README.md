@@ -29,7 +29,7 @@ We will be installing dependencies using `pip`, the official Python package mana
 Copy and paste (and run) the following line in your terminal session to install all necessary packages.
 
 ```bash
-pip3 install spotipy && pip3 install youtube_dl && pip3 install youtube_search && pip3 install yt_dlp && pip3 install ffprobe && pip3 install ffmpeg
+pip install -r requirements.txt
 ```
 
 ### 3. Setting up Spotify
