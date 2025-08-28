@@ -71,7 +71,14 @@ python3 spotify_to_mp3.py
 
 If you run into an error saying something like "ffprobe or avprobe not found", check out this [solution](https://stackoverflow.com/questions/30770155/ffprobe-or-avprobe-not-found-please-install-one).
 
+Also during/after the execution of the script , it may prompt saying press "Ctrl+C". Don’t worry and just do it and it resumes the further process and starts asking credentials.
+
 If all goes well, you should see your playlist beginning to download in a folder with the same name. Enjoy!
+
+### Enhanced Spotify Playlist Downloader Script contains:
+- Added multiprocessing support for faster downloads.
+- Included functionality to download album art and embed it in MP3 files.
+- Improved error handling for better reliability.
 
 ## Modifications
 
